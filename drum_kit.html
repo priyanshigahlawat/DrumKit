@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="abc"></div>
+    <div class="cont">
+        <div class = "keys">
+            <div class="key a" data-key="81">
+                <kbd>Q</kbd><br>
+                <span class="sound">hat</span>
+            </div>
+            <div class="key" data-key="87">
+                <kbd>W</kbd><br>
+                <span class="sound">kick</span>
+            </div>
+            <div class="key" data-key="69">
+                <kbd>E</kbd><br>
+                <span class="sound">kick</span>
+            </div>
+            <div class="key" data-key="82">
+                <kbd>R</kbd><br>
+                <span class="sound">perk</span>
+            </div>
+            <div class="key" data-key="84">
+                <kbd>T</kbd><br>
+                <span class="sound">perk</span>
+            </div>
+            <div class="key" data-key="89">
+                <kbd>Y</kbd><br>
+                <span class="sound">perk</span>
+            </div>
+            <div class="key" data-key="85">
+                <kbd>U</kbd><br>
+                <span class="sound">perk</span>
+            </div>
+            <div class="key" data-key="73">
+                <kbd>I</kbd><br>
+                <span class="sound">snare</span>
+            </div>
+            <div class="key" data-key="79">
+                <kbd>O</kbd><br>
+                <span class="sound">snare</span>
+            </div>
+            <div class="key" data-key="80">
+                <kbd>P</kbd><br>
+                <span class="sound">hat</span>
+            </div>
+        </div>
+    
+
+    <audio data-key="81" src="./wavbvkery - Old School Drum Kit/Hats/wavbvkery - Old School Hat 15.wav"></audio>
+    <audio data-key="87" src="./wavbvkery - Old School Drum Kit/Kicks/wavbvkery - Old School Kick 30.wav"></audio>
+    <audio data-key="69" src="./wavbvkery - Old School Drum Kit/Kicks/wavbvkery - Old School Kick 10.wav"></audio>
+    <audio data-key="82" src="./wavbvkery - Old School Drum Kit/Percs/wavbvkery - Old School Perc 02.wav"></audio>
+    <audio data-key="84" src="./wavbvkery - Old School Drum Kit/Percs/wavbvkery - Old School Perc 07.wav"></audio>
+    <audio data-key="89" src="./wavbvkery - Old School Drum Kit/Percs/wavbvkery - Old School Perc 11.wav"></audio>
+    <audio data-key="85" src="./wavbvkery - Old School Drum Kit/Percs/wavbvkery - Old School Perc 15.wav"></audio>
+    <audio data-key="73" src="./wavbvkery - Old School Drum Kit/Snares/wavbvkery - Old School Snare 01.wav"></audio>
+    <audio data-key="79" src="./wavbvkery - Old School Drum Kit/Snares/wavbvkery - Old School Snare 24.wav"></audio>
+    <audio data-key="80" src="./wavbvkery - Old School Drum Kit/Hats/wavbvkery - Old School Hat 06.wav"></audio>
+    <br><br><br><br><br><br><br><br>
+    <center>
+    <h1 style="color: yellow; font-size: 50px;">PRESS THE KEY AND ENJOY DRUM KIT</h1>
+    </center>
+    </div>
+
+    <script>
+        window.addEventListener('keydown',function(e){
+            
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const box = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            box.setAttribute('style','border: 3px solid yellow;');
+
+            window.setTimeout(function() {
+                // box.setAttribute('style','');
+                box.removeAttribute('style');
+            },300);
+
+            if(!audio)
+                return;
+            audio.play();    
+        });
+        // window.addEventListener('keyup', function(e) {
+        //     const box = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        //     box.setAttribute('style','');
+        // })
+    </script>
+</body>
+</html>
