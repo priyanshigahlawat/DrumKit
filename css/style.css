@@ -9,13 +9,14 @@
     top: 0px;
     position: absolute;
     width: 100%;
-    height: 800px;
+    height: 700px;
 }
 
 .abc{
-    background-image: url('../image/drum-set-1839383_1920.jpg');
-    filter: blur(4px);
-    height: 800px;
+    background-image: url('../image/drum-kit-1784134_1920.jpg');
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    height: 700px;
 }
 
 .keys{
@@ -41,16 +42,16 @@
 }
 
 .key:hover{
-    box-shadow: 5px 5px 10px yellow;
+    box-shadow: 5px 5px 10px rgb(176, 11, 241);
     transform: scale(1.2);
 }
 
 .onHoverEffect {
-    box-shadow: 5px 5px 10px yellow;
+    box-shadow: 5px 5px 10px rgb(176, 11, 241);
     transform: scale(1.2);
 }
 
 .sound{
     font-size: 15px;
-    color: yellow;
+    color: rgb(176, 11, 241);
 }
